@@ -16,8 +16,6 @@ public class AddNewCategory extends BaseTest {
         Thread.sleep(5000);
 
         // Login vào trang cms
-        WebElement password = driver.findElement(By.id("password"));
-        password.clear();
         driver.findElement(By.id("email")).sendKeys("admin@example.com");
         Thread.sleep(1000);
         driver.findElement(By.id("password")).sendKeys("123456");
