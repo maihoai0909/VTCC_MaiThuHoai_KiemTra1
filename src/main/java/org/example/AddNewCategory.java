@@ -43,6 +43,19 @@ public class AddNewCategory extends BaseTest {
         Select select = new Select(driver.findElement(By.name("digital")));
         select.selectByVisibleText("Digital");
         Thread.sleep(2000);
+        //Add Banner
+        driver.findElement(By.xpath("//div[5]//div[1]//div[1]//div[1]//div[1]")).click();
+        driver.findElement(By.xpath("//input[@placeholder='Search your files']")).sendKeys("Drink");
+        driver.findElement(By.xpath("//div[@title='drink-on-a-plate-with-a-book-behind-it.jpg']//img[@class='img-fit']")).click();
+        driver.findElement(By.xpath("//button[normalize-space()='Add Files']")).click();
+        Thread.sleep(2000);
+        
+        //Add Icon
+        driver.findElement(By.xpath("//div[6]//div[1]//div[1]//div[1]//div[1]")).click();
+        driver.findElement(By.xpath("//input[@placeholder='Search your files']")).sendKeys("Cosy");
+        driver.findElement(By.xpath("//div[@data-value=\"521\"]")).click();
+        driver.findElement(By.xpath("//button[normalize-space()='Add Files']")).click();
+        Thread.sleep(2000);
         //Meta Title
         driver.findElement(By.cssSelector("[placeholder = 'Meta Title']")).sendKeys("test");
         Thread.sleep(1000);
